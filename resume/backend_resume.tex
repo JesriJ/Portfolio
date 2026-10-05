@@ -1,0 +1,151 @@
+%-------------------------
+% Resume in LaTeX
+% Formatting based on Jake Gutierrez's Resume (MIT License)
+% https://github.com/jakegut/resume
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}
+  {\vspace{-4pt}\scshape\raggedright\large}
+  {}{0em}{}
+  [\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge \scshape YOUR NAME} \\ \vspace{1pt}
+  \small
+  (000) 000-0000 $|$
+  \href{mailto:you@example.com}{\underline{you@example.com}} $|$
+  \href{https://www.linkedin.com/in/your-handle}{\underline{linkedin.com/in/your-handle}} $|$
+  \href{https://github.com/your-handle}{\underline{github.com/your-handle}}
+\end{center}
+
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University of Maryland}{College Park, MD}
+    {Bachelor of Science in Computer Science $|$ GPA: 3.65/4.0}{Expected May 2028}
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in,label={}]
+  \small{\item{
+    \textbf{Languages}{: Java, Python, TypeScript, JavaScript, C, SQL} \\
+    \textbf{Frameworks \& Data}{: Spring Boot, FastAPI, React, Next.js, PostgreSQL, Redis, Prisma, SQLAlchemy} \\
+    \textbf{Tools \& Cloud}{: Git, Docker, Redis Streams, AWS EC2, Amazon RDS, REST APIs, WebSockets}
+  }}
+\end{itemize}\vspace{-12pt}
+
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Freelance Software Engineer}{May 2026 -- Aug 2026}
+    {Online Proprietary Trading Group}{Remote}
+  \resumeItemListStart
+    \resumeItem{Designed and deployed a Java/Spring Boot and React/TypeScript trading analytics platform used daily by 10+ traders, replacing third-party subscriptions costing each user \$100+/month}
+    \resumeItem{Built a live, event-driven screening pipeline that evaluates 10,000+ market instruments against 15+ configurable indicators and surfaces strategy-matched watchlists}
+    \resumeItem{Integrated cloud market-data services, Redis-backed state, and WebSockets to ingest, process, and render live updates at $<$100 ms p95 end-to-end latency}
+    \resumeItem{Owned requirements, architecture, testing, deployment, and production support for the client}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Developer}{Jan 2026 -- Jun 2026}
+    {Physical Therapy \& Rehabilitation Clinic}{Bowie, MD}
+  \resumeItemListStart
+    \resumeItem{Collaborated on a 5-person team to build and deploy a scheduling platform used by 5 clinic employees to manage 50+ weekly appointments, replacing manual calendar and planner workflows}
+    \resumeItem{Owned backend development with Python, FastAPI, SQLAlchemy, and PostgreSQL, building APIs for scheduling, availability, patient, and room management}
+    \resumeItem{Prevented overlapping therapist, patient, and room bookings using PostgreSQL exclusion constraints and idempotency keys for appointment creation}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Computer Science Mentor \& Tutor}{Aug 2025 -- May 2026}
+    {University of Maryland Honors College}{College Park, MD}
+  \resumeItemListStart
+    \resumeItem{Mentored 30+ students for 10+ hours per week in data structures, algorithms, object-oriented programming, debugging, and software design}
+    \resumeItem{Reviewed 50+ assignments and projects for correctness and code quality, giving students actionable feedback on debugging and software design}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{\href{https://contractor-marketplace-seven.vercel.app/}{Contractor Marketplace}} $|$ \emph{Next.js, TypeScript, PostgreSQL, Prisma, Stripe}}{Mar 2026 -- Present}
+  \resumeItemListStart
+    \resumeItem{Built and deployed a full-stack marketplace used by 40+ users, including 15+ contractors, to post jobs, submit bids, message, pay, and review completed work}
+    \resumeItem{Designed a relational data model and transactional workflows that atomically assign contractors, reject competing bids, and prevent duplicate hires}
+    \resumeItem{Implemented idempotent Stripe webhooks for real payments and enforced session-, role-, and resource-level authorization across customer and contractor workflows}
+    \resumeItem{Containerized with Docker and deployed on AWS EC2 and Amazon RDS before migrating to Vercel}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Distributed AI Email Processing System} $|$ \emph{Java, Python, Spring Boot, Redis Streams}}{Dec 2025 -- Feb 2026}
+  \resumeItemListStart
+    \resumeItem{Built a distributed pipeline with Redis Streams consumer groups and 4 workers, scaling throughput by approximately 3.5$\times$ from 50--60 to 180--210 emails per minute on a 10,000-email workload}
+    \resumeItem{Developed a GPT-4o mini classification and summarization service that achieved 94--95\% classification accuracy across repeated evaluations of 1,000 labeled emails at \$0.20--\$1.00 per 1,000 emails}
+    \resumeItem{Implemented at-least-once processing with idempotent writes, exponential-backoff retries, and a dead-letter queue, with no observed job loss across 5 injected failure modes}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
